@@ -10,17 +10,16 @@ Original file is located at
 This program calculates the factorial of a given number recursively.
 """
 ## Modified Code
-n = int(input("Enter a number: "))
+def factorial(n):
+    if n < 0:
+        raise ValueError("Factorial is not defined for negative numbers.")
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
 
-if n < 0:
-    print("Factorial does not exist for negative numbers")
-else:
-    fact = 1
-
-    for i in range(1, n + 1):
-        fact *= i
-
-    print("Factorial =", fact*
+# Run demonstration
+num = 5
+print(f"The factorial of {num} is {factorial(num)}")
 
 # Run demonstration
 num = 5
